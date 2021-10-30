@@ -82,7 +82,7 @@ header{
 .button:hover{
 	background-color: #0e416f;
 }
-@media(max-width: 750px){
+@media(max-width: 850px){
 	.time, .phone{
 		display: none;
 	}
@@ -549,7 +549,6 @@ input:focus{
 	font-size: 30px;
 	color: #fff;
 }
-@media(max-width: 840px){.phone{display:none;}}
 .control__form{
 	margin: 50px auto;
 }
