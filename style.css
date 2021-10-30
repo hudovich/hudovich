@@ -549,6 +549,7 @@ input:focus{
 	font-size: 30px;
 	color: #fff;
 }
+@media(max-width: 840px){.phone{display:none;}}
 .control__form{
 	margin: 50px auto;
 }
