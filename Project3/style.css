@@ -879,7 +879,12 @@ span.a4{
 		min-width: 100%;
 	}
 }
-
+@media (max-width: 375px){
+	.pod_text{
+	margin-left: 20px;
+	width: 80%;
+	}
+}
 /*==================================section_advantages===========================*/
 .section_advantages{
 	display: flex;
