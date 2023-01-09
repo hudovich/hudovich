@@ -1,0 +1,246 @@
+*{ /*Отменяем все стили тегов*/
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline:none;}
+
+nav,footer,header,asibe{display: block;}
+
+html,body{
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align:top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.win_display{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+	background-image: url(img/fon.png);
+	background-size: cover;
+}
+.win_display .folder{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100px;
+	height: 110px;
+	padding: 10px 3px;
+	transition: background-color 0.3s;
+}
+.folder:hover{
+	background-color: #68686a6d;
+}
+.win_display .folder img{
+	width: 60px;
+	height: 60px;
+}
+.win_navbar{
+	position: absolute;
+	z-index: 4;
+	height: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.win_navbar .box{
+	background-color: #68686a;
+	display: flex;
+	justify-content: space-between;
+}
+.win_navbar .box .nav img{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	cursor: pointer;
+}
+.win_navbar .box .min-nav{
+	display: flex;
+	align-items: center;
+}
+.win_navbar .box .min-nav .lang{
+	margin: 5px;
+}
+.win_navbar .box .min-nav .time{
+	margin: 15px;
+	color: #fff;
+}
+.display_nav_menu{
+	display: none;
+}
+.display_nav_menu_active{
+	display: block;
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+	z-index: 10;
+	width: 200px;
+	max-height: 300px;
+	height: 200px;
+	background-color: #68686aba;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.display_nav_menu img{
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+.display_nav_menu ul li{
+	display: flex;
+	align-items: center;
+	color: #fff
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.display{
+	display: none;
+	justify-content: space-between;
+	position: relative;
+	background-color: #1c00ff82;
+	z-index: 2;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 8px;
+}
+._open{
+	display: flex;
+}
+.display_content{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	top: 30px;
+	background-color: #fff;
+}
+
+.display .display_header img{
+	margin-right: 8px;
+	margin: 4px;
+	width: 18px;
+	height: 18px;
+}
+.name_file{
+	display: flex;
+	justify-content: center;
+	color: #fff;
+}
+.file_name_text{
+	margin-top: 10px;
+}
+.display_navigation{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+.none{
+	display: block;
+	width: 18px;
+	height: 3px;
+	background-color: #fff;
+	border: 2px solid #fff;
+	margin-right: 8px;
+	cursor: pointer;
+}
+.open{
+	display: block;
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	margin-right: 8px;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.exit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 18px;
+	height: 18px;
+	border: 2px solid rgba(155, 2, 2, 0.578);
+	border-radius: 3px;
+	margin: 2px;
+	color: #fff;
+	cursor: pointer;
+	
+}
+.exit:hover{
+	background-color: rgba(155, 2, 2, 0.578);
+}
+.program{
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	margin: 0px 25px;
+}
+.box_file{
+	display: none;
+	justify-content: flex-start;
+	position: relative;
+	background-color:  #7b7b7eba;
+	padding: 0px 20px;
+	transition: background-color 0.3s;
+}
+.box_file_activ{
+	display: flex;
+}
+.box_file:hover{
+	cursor: pointer;
+	background-color: #5c5c5fba;
+}
+.name_footer_file{
+	margin-top: 16px;
+	margin-left: 15px;
+	color:#fff;
+}
+.box_file img{
+	width: 35px;
+	height: 35px;
+}
+
+@media only screen and (max-width: 600px){
+	.display{
+		width: 100%;
+		height: 80%;
+	}
+}
