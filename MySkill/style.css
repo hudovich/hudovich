@@ -1,0 +1,133 @@
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    background-color:rgb(72, 72, 72);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(59, 98, 159);
+    border-radius: 9em;
+    transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: all 0.5s;
+    background-color: #888888;
+}
+
+body{
+    margin: 0px;
+    padding: 0px 10%;
+    background-color: rgb(72, 72, 72);
+    font-family: 'Courier New', Courier, monospace;
+}
+.user_img {
+    width: 250px;
+    height: 400px;
+}
+.user_img img{
+    width: 250px;
+    height: 400px;
+    border-radius: 8px;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+.info_box, .question{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+    background-color: #888888;
+    border-radius: 8px;
+    padding: 25px;
+
+}
+.infobox_box_item {
+    display: flex;
+}
+.infobox_box_item h1{
+    font-size: 1.8em;
+    color: rgb(59, 98, 159);
+}
+.age {
+    font-size: .8 em;
+    color: rgb(79, 90, 109);
+}
+.porfolio {
+}
+.write {
+    display: flex;
+    max-width: 200px;
+    background-color: rgb(11, 11, 140);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: rgb(83, 138, 226);
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.write:hover{
+    background-color: rgb(8, 8, 81);
+    color: rgb(58, 94, 151);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.styby_plan {
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.skills_item{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    width: 200px;
+    height: 350px;
+    background-color: #888888;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 25px;
+}
+.skills_item img{
+    width: 250px;
+}
+.skills_item .name{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.skills_item:hover .name{
+    transition: all 0.5s;
+    color: rgb(58, 94, 151);
+}
+.name_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.like{
+    display: flex;
+}
+.like img{
+    width: 25px;
+    height: 25px;
+}
