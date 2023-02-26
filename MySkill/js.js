@@ -54,9 +54,9 @@ let state = {
             },
             greed:{
                 src:'img/none.png',
-                alt: 'greed',
+                alt: 'grid',
                 href: '#',
-                name: 'Greed',
+                name: 'Grid',
                 progress: '0',
             },
             scss:{
