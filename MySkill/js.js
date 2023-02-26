@@ -292,7 +292,7 @@ creator('.write', state.button);
 creator('.infobox_box_item>h1', state.user.name);
 creator('.age', state.user.age);
 creator('.porfolio', state.user.portfolio);
-creator('.styby_plan', state.plan.stybyPlan.join(''));
+//creator('.styby_plan', state.plan.stybyPlan.join(''));
 
 function skill(elem){
     let skills = document.querySelector('.skills');
@@ -337,7 +337,7 @@ skill(state.skills.skillsGo.desinger);
 skill(state.skills.skillsGo.seo);
 skill(state.skills.skillsGo.smm);
 skill(state.skills.skillsGo.english);
-skill(state.skills.skillsGo.polisk);
+//skill(state.skills.skillsGo.polisk);
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
