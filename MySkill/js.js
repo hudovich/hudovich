@@ -47,9 +47,9 @@ let state = {
             },
             flex:{
                 src:'img/Flex.png',
-                alt: 'flex',
+                alt: 'Flexbox',
                 href: '#',
-                name: 'Flex',
+                name: 'Flexbox',
                 progress: '4',
             },
             greed:{
