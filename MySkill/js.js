@@ -167,7 +167,7 @@ let state = {
         }
     },
     user:{
-        img: 'img/User.jfif',
+        img: 'https://klike.net/uploads/posts/2020-03/1583661621_1.jpg',
         alt: 'userAvatar',
         name: 'Виталий Гудович',
         age: '28лет (8 октября 1995)',
