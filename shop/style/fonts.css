@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/gothampro.ttf') format('truetype');  
+  font-style: normal; 
+  font-weight: normal; 
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/gothampro_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/gothampro_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/gothampro_bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body{
+  font-family: "Gotham Pro", sans-serif;
+}
+.super{
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 44px;
+  color: #222222;
+}
+h1{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #222222;
+}
+h2{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  color: #222222;
+}
+h3{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #222222;
+}
+h4{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  color: #222222;
+}
+p{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #222222;
+}
+a{
+  list-style: none;
+  color: #222222;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+}
