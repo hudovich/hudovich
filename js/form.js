@@ -39,6 +39,8 @@ btnOrders.forEach((btn, index) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(form);
+            const message = document.getElementById('message').value; // Получаем сообщение
+            await sendMessageToTelegram(message); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
         });
@@ -77,6 +79,36 @@ async function sendFormData(formData) {
     } catch (error) {
         console.error("Error during form submission:", error);
         return { success: false, message: "An error occurred. Please try again." };
+    }
+}
+
+async function sendMessageToTelegram(message) {
+    const token = '8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
+    const chatId = '5151144363'; // Замените на ваш chat ID
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    const payload = {
+        chat_id: chatId,
+        text: message,
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        console.log('Message sent:', result);
+    } catch (error) {
+        console.error('Error sending message:', error);
     }
 }
 
