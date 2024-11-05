@@ -60,7 +60,8 @@ let formDesing = (title) => {
 
 
 async function sendFormData(formData) {
-    let url = 'https://formsubmit.co/ajax/f6c7c073a5dc2fc7f8924c4f01534595 ';
+    /* f6c7c073a5dc2fc7f8924c4f01534595 */
+    let url = 'https://formsubmit.co/ajax/vitaliycall@gmail.com';
     try {
         const response = await fetch(url, {
             method: "POST",
