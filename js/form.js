@@ -7,7 +7,7 @@ form.addEventListener('submit', function(event) {
     const name = formData.get('name');
     const email = formData.get('email');
     const massage = formData.get('massage');
-    sendFormData('https://hudovich.github.io/hudovich/js/active.php', formData)
+    sendFormData(formData)
     form.reset();
 });
    
@@ -66,7 +66,8 @@ let formDesing = (title) => {
 }
 
 
-async function sendFormData(url, formData) {
+async function sendFormData(formData) {
+    let url = 'https://formsubmit.co/ajax/your-email@example.com';
     try {
         const response = await fetch(url, {
             method: "POST",
