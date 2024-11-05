@@ -67,7 +67,7 @@ let formDesing = (title) => {
 
 
 async function sendFormData(formData) {
-    let url = 'https://formsubmit.co/ajax/your-email@example.com';
+    let url = 'https://formsubmit.co/ajax/vitaliycall@gmail.com';
     try {
         const response = await fetch(url, {
             method: "POST",
