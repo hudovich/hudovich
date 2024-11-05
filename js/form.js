@@ -7,7 +7,7 @@ form.addEventListener('submit', function(event) {
     const name = formData.get('name');
     const email = formData.get('email');
     const massage = formData.get('massage');
-    sendFormData('/active.php', formData)
+    sendFormData('https://hudovich.github.io/hudovich/js/active.php', formData)
     form.reset();
 });
    
