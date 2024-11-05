@@ -4,9 +4,6 @@ let orders = document.querySelector('.pop-app>.content>form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(form);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const massage = formData.get('massage');
     sendFormData(formData)
     form.reset();
 });
@@ -42,11 +39,7 @@ btnOrders.forEach((btn, index) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            console.log(title)
-            console.log('Email:', email);
-            console.log('Телефон:', phone);
+            sendFormData(formData)
             form.reset();
         });
     });
