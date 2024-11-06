@@ -91,7 +91,7 @@ async function sendMessageToTelegram(message) {
     const payload = {
         chat_id: chatId,
         text: message,
-    };
+    }
 
     try {
         const response = await fetch(url, {
@@ -104,7 +104,8 @@ async function sendMessageToTelegram(message) {
         });
 
         if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
+            const errorData = await response.json();
+            throw new Error(`Error: ${errorData.description || response.status}`);
         }
 
         const result = await response.json();
