@@ -40,7 +40,7 @@ btnOrders.forEach((btn, index) => {
             e.preventDefault();
             const formData = new FormData(form);
             const message = document.getElementById('message').value; // Получаем сообщение
-            await sendMessageToTelegram(message); // Отправляем сообщение telegram
+            await sendMessageToTelegram(formData); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
         });
