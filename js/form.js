@@ -4,6 +4,7 @@ let orders = document.querySelector('.pop-app>.content>form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(form);
+    sendMessageToTelegram(formData)
     sendFormData(formData)
     form.reset();
 });
