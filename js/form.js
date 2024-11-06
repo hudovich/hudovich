@@ -83,7 +83,7 @@ async function sendFormData(formData) {
     }
 }
 
-async function sendMessageToTelegram(message) {'
+async function sendMessageToTelegram(message) {
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const token = 'AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
     const chatId = '8011741715'; // Замените на ваш chat ID
