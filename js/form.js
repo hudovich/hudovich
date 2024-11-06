@@ -108,6 +108,17 @@ async function sendMessageToTelegram(message) {
             throw new Error(`Error: ${errorData.description || response.status}`);
         }
 
+        // Получаем ответ от API
+        const result = await response.json();
+        console.log("Message sent!", result);  // Выводим ответ в консоль
+
+        // Проверяем результат в консоли
+        if (result.ok) {
+            console.log("Message sent successfully:", result.result);
+        } else {
+            console.error("Failed to send message:", result);
+        }
+
         const result = await response.json();
         console.log('Message sent:', result);
     } catch (error) {
