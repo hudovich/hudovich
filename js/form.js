@@ -84,10 +84,9 @@ async function sendFormData(formData) {
 }
 
 async function sendMessageToTelegram(message) {
-    const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
     const token = 'AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
     const chatId = '8011741715'; // Замените на ваш chat ID
-    const url = `${proxyUrl}https://api.telegram.org/bot${token}/sendMessage`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     const payload = {
         chat_id: chatId,
@@ -97,6 +96,7 @@ async function sendMessageToTelegram(message) {
     try {
         const response = await fetch(url, {
             method: 'POST',
+            mode: 'no-cors'
             headers: {
                 'Content-Type': 'application/json',
             },
