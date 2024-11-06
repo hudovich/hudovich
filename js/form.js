@@ -96,7 +96,7 @@ async function sendMessageToTelegram(message) {
     try {
         const response = await fetch(url, {
             method: 'POST',
-            mode: 'no-cors'
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
