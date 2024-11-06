@@ -86,7 +86,7 @@ async function sendFormData(formData) {
 async function sendMessageToTelegram(message) {
     const token = '8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
     const chatId = '8011741715'; // Замените на ваш chat ID
-    const url = `https://api.telegram.org/bot8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU/POST`;
+    const url = `https://api.telegram.org/bot8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU/sendMassage`;
 
     const payload = {
         chat_id: chatId,
