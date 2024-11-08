@@ -40,9 +40,8 @@ btnOrders.forEach((btn, index) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            const message = Array.from(formData.entries())
-                .map(([key, value]) => `${key}: ${value}`)
-                .join('\n');
+            const message = Array.from(formData.entries()).map(([key, value]) => `${key}: ${value}`).join('\n');
+            console.log(message);
             sendMessageToTelegram(message); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
@@ -89,12 +88,12 @@ async function sendMessageToTelegram(message) {
     const token = '8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
     const chatId = '5151144363'; // Замените на ваш chat ID
     const url = `https://api.telegram.org/bot8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU/sendMessage`;
-
+    
     const payload = {
         chat_id: chatId,
         text: message,
     }
-    console.log(JSON.stringify(payload));
+    console.log(message);
     try {
         const response = await fetch(url, {
             method: 'POST',
