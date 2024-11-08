@@ -4,7 +4,8 @@ let orders = document.querySelector('.pop-app>.content>form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(form);
-    sendMessageToTelegram(formData)
+    const message = Array.from(formData.entries()).map(([key, value]) => `${key}: ${value}`).join('\n');
+    sendMessageToTelegram(message); // Отправляем сообщение telegram
     sendFormData(formData)
     form.reset();
 });
@@ -41,7 +42,6 @@ btnOrders.forEach((btn, index) => {
             e.preventDefault();
             const formData = new FormData(form);
             const message = Array.from(formData.entries()).map(([key, value]) => `${key}: ${value}`).join('\n');
-            console.log(message);
             sendMessageToTelegram(message); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
