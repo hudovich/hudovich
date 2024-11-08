@@ -41,7 +41,7 @@ btnOrders.forEach((btn, index) => {
             e.preventDefault();
             const formData = new FormData(form);
             // const message = document.getElementById('message').value; // Получаем сообщение
-            console.log(formData);
+            console.log(JSON.stringify(formData));
             sendMessageToTelegram(formData); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
