@@ -87,38 +87,27 @@ async function sendFormData(formData) {
 async function sendMessageToTelegram(message) {
     const token = '8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU'; // Замените на ваш токен
     const chatId = '5151144363'; // Замените на ваш chat ID
-    const url = `https://api.telegram.org/bot8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU/sendMessage`;
+    //const url = `https://api.telegram.org/bot8011741715:AAHovNfMxwbBOjG1lAyuSbSjGYSu5o3DVxU/sendMessage`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
     
-    const payload = {
-        chat_id: chatId,
-        text: message,
-    }
+    // const payload = {
+    //     chat_id: chatId,
+    //     text: message,
+    // }
     console.log(message);
     try {
-        const response = await fetch(url, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        });
+        const response = await fetch(url);
 
-        // if (!response.ok) {
-        //     const errorData = await response.json();
-        //     throw new Error(`Error: ${errorData.description || response.status}`);
-        // }
-        // Проверяем результат в консоли
-        if (result.ok) {
-            console.log("Message sent successfully:", result.result);
-        } else {
-            console.error("Failed to send message:", result);
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`Ошибка ${response.status}: ${errorText}`);
+            return;
         }
 
         const result = await response.json();
-        console.log('Message sent:', result);
+        console.log('Сообщение успешно отправлено:', result);
     } catch (error) {
-        console.error('Error sending message:', error);
+        console.error('Error sending message:', error.message);
     }
 }
 
