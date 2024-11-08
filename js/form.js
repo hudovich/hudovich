@@ -40,9 +40,10 @@ btnOrders.forEach((btn, index) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            // const message = document.getElementById('message').value; // Получаем сообщение
-            console.log(JSON.stringify(formData));
-            sendMessageToTelegram(formData); // Отправляем сообщение telegram
+            const message = Array.from(formData.entries())
+                .map(([key, value]) => `${key}: ${value}`)
+                .join('\n');
+            sendMessageToTelegram(message); // Отправляем сообщение telegram
             sendFormData(formData)
             form.reset();
         });
