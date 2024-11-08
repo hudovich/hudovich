@@ -93,7 +93,7 @@ async function sendMessageToTelegram(message) {
         text: message,
     }
     if (!JSON.stringify(payload) || JSON.stringify(payload).trim() === '') {
-        console.error('Текст сообщения пустой!');
+        console.error('Текст сообщения пустой!' + JSON.stringify(payload));
     return;
 }
     try {
