@@ -103,10 +103,10 @@ async function sendMessageToTelegram(message) {
             body: JSON.stringify(payload),
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(`Error: ${errorData.description || response.status}`);
-        }
+        // if (!response.ok) {
+        //     const errorData = await response.json();
+        //     throw new Error(`Error: ${errorData.description || response.status}`);
+        // }
         // Проверяем результат в консоли
         if (result.ok) {
             console.log("Message sent successfully:", result.result);
