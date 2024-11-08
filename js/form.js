@@ -94,7 +94,6 @@ async function sendMessageToTelegram(message) {
     //     chat_id: chatId,
     //     text: message,
     // }
-    console.log(message);
     try {
         const response = await fetch(url);
 
