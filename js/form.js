@@ -92,7 +92,10 @@ async function sendMessageToTelegram(message) {
         chat_id: chatId,
         text: message,
     }
-    console.log(message);
+    if (!message || message.trim() === '') {
+    console.error('Текст сообщения пустой!');
+    return;
+}
     try {
         const response = await fetch(url, {
             method: 'POST',
