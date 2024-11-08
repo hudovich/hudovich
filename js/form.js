@@ -93,7 +93,6 @@ async function sendMessageToTelegram(message) {
         text: message,
     }
     console.log(JSON.stringify(payload));
-}
     try {
         const response = await fetch(url, {
             method: 'POST',
